@@ -39,7 +39,7 @@ const CatsDropDown = ({ Cat }) => {
 
   useEffect(() => {
     setSelectedCat(categoryMapping[Cat] || Cat);
-  }, [Cat]);
+  }, [Cat, categoryMapping]);
 
   const handleSelectCat = (cat) => {
     setSelectedCat(cat);
