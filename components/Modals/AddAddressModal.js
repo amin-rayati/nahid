@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const MapWithNoSSR = dynamic(() => import("../Cart/Map"), { ssr: false });
+// const MapWithNoSSR = dynamic(() => import("../Cart/Map"), { ssr: false });
 import Portal from "./Portal";
 
 const AddAddressModal = ({ isAddressModalOpen, closeAddressModal }) => {
@@ -45,9 +45,9 @@ const AddAddressModal = ({ isAddressModalOpen, closeAddressModal }) => {
                 className="w-[100%] bg-[#FEFCED] border-[1px] border-[#EBDFBE] text-[16px] font-light rounded-[8px] p-3 my-3 outline-none placeholder:text-[16px] placeholder:text-[#1E1E1ECC] font-light"
               />
 
-              <div className="my-3">
+              {/* <div className="my-3">
                 <MapWithNoSSR />
-              </div>
+              </div> */}
 
               {/* exactAddress */}
               <span className="text-[#1E1E1E] text-[16px] font-regular text-right">
