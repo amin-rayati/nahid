@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import BreadCrumb from "@/components/BreadCrumb/Index";
+import BreadCrumb from "@/components/BreadCrumb/BreadCrumb";
 import SingleStoryInfo from "@/components/SingleStory/SingleStoryInfo";
 import SingleEpisodeSort from "@/components/SingleEpisode/SingleEpisodeSort";
 import Image from "next/image";

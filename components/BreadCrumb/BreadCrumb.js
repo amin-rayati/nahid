@@ -11,7 +11,7 @@ const categoryMapping = {
   audio: "کتاب صوتی",
 };
 
-const Index = () => {
+const BreadCrumb = () => {
   const pathname = usePathname();
   const path = pathname.split("/").filter(Boolean);
 
@@ -50,4 +50,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default BreadCrumb;

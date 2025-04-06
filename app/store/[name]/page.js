@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import BreadCrumb from "@/components/BreadCrumb/Index";
+import BreadCrumb from "@/components/BreadCrumb/BreadCrumb";
 import SingleStoryInfo from "@/components/SingleStory/SingleStoryInfo";
 import Image from "next/image";
 import typeo from "@/public/img/type.png";

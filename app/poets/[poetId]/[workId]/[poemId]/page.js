@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import BreadCrumb from "@/components/BreadCrumb/Index";
+import BreadCrumb from "@/components/BreadCrumb/BreadCrumb";
 import TextSettingModal from "@/components/Modals/TextSettingModal";
 
 import typeo from "@/public/img/type.png";

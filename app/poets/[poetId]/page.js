@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 import PoemModal from "@/components/Modals/PoemModal";
-import BreadCrumb from "@/components/BreadCrumb/Index";
+import BreadCrumb from "@/components/BreadCrumb/BreadCrumb";
 
 import Image from "next/image";
 import single1 from "@/public/img/single1.png";
