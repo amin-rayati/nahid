@@ -25,12 +25,12 @@ const Page = () => {
     if (currentStep < steps.length - 1) setCurrentStep(currentStep + 1);
   };
 
-  const stepContents = [
-    <StepOne nextStep={nextStep} />,
-    <StepTwo nextStep={nextStep} />,
-    <StepThree nextStep={nextStep} />,
-    <StepFour nextStep={nextStep} />,
-  ];
+  // const stepContents = [
+  //   <StepOne nextStep={nextStep} />,
+  //   <StepTwo nextStep={nextStep} />,
+  //   <StepThree nextStep={nextStep} />,
+  //   <StepFour nextStep={nextStep} />,
+  // ];
 
   return (
     <div className="grid grid-cols-12 mt-20" dir="rtl">
@@ -120,7 +120,10 @@ const Page = () => {
             </motion.div>
 
             {/* Step Content */}
-            {stepContents[currentStep]}
+            {currentStep === 0 && <StepOne nextStep={nextStep} />}
+            {currentStep === 1 && <StepTwo nextStep={nextStep} />}
+            {currentStep === 2 && <StepThree nextStep={nextStep} />}
+            {currentStep === 3 && <StepFour nextStep={nextStep} />}
           </div>
         </motion.div>
       </motion.div>
