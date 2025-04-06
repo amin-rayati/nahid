@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import BreadCrumb from "@/components/BreadCrumb/index";
+import BreadCrumb from "@/components/BreadCrumb/Index";
 import TextSettingModal from "@/components/Modals/TextSettingModal";
 
 import typeo from "@/public/img/type.png";
@@ -21,7 +21,7 @@ import single1 from "@/public/img/single1.png";
 import user from "@/public/img/user.png";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants } = commonAnimations;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
@@ -380,4 +380,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

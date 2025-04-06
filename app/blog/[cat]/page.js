@@ -9,7 +9,7 @@ import BlogSort from "@/components/Blog/BlogSort";
 import BlogList from "@/components/Blog/BlogList";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants } = commonAnimations;
   const pathname = usePathname();
   const Cat = pathname.split("/").pop();
@@ -52,4 +52,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

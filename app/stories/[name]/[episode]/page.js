@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 import TextSettingModal from "@/components/Modals/TextSettingModal";
-import BreadCrumb from "@/components/BreadCrumb/index";
+import BreadCrumb from "@/components/BreadCrumb/Index";
 import SingleStoryInfo from "@/components/SingleStory/SingleStoryInfo";
 import SingleEpisodeSort from "@/components/SingleEpisode/SingleEpisodeSort";
 import Image from "next/image";
@@ -17,7 +17,7 @@ import {
 } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants } = commonAnimations;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -219,4 +219,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

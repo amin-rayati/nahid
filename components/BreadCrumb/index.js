@@ -3,6 +3,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import { FaChevronLeft } from "react-icons/fa6";
 
+import Link from "next/link";
 const categoryMapping = {
   stories: "داستان ها",
   poets: "اشعار",
@@ -10,7 +11,7 @@ const categoryMapping = {
   audio: "کتاب صوتی",
 };
 
-const index = () => {
+const Index = () => {
   const pathname = usePathname();
   const path = pathname.split("/").filter(Boolean);
 
@@ -18,9 +19,9 @@ const index = () => {
     <nav className="text-gray-600 text-sm">
       <ul className="flex flex-wrap items-center gap-2 justify-start flex-row-reverse">
         <li>
-          <a href="/" className="text-[#1E1E1ECC] font-regular text-[16px]">
+          <Link href="/" className="text-[#1E1E1ECC] font-regular text-[16px]">
             خانه
-          </a>
+          </Link>
         </li>
         {path.map((name, index) => {
           const translatedName =
@@ -49,4 +50,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

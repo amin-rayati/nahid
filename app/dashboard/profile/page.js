@@ -13,7 +13,7 @@ import { FiEdit } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
 
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants } = commonAnimations;
   return (
     <motion.div
@@ -116,4 +116,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

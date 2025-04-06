@@ -6,7 +6,7 @@ import about1 from "@/public/img/about1.png";
 import about2 from "@/public/img/about2.png";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants, imageHover } = commonAnimations;
 
   return (
@@ -151,4 +151,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

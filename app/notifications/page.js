@@ -4,7 +4,7 @@ import Image from "next/image";
 import calendar from "@/public/img/calendar.png";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants, imageHover } = commonAnimations;
 
   return (
@@ -73,4 +73,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants } = commonAnimations;
 
   return (
@@ -229,4 +229,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -9,7 +9,7 @@ import Sort from "@/components/Works/Sort";
 import Filter from "@/components/Works/Filter";
 import StoryList from "@/components/Stories/StoryList";
 
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants } = commonAnimations;
 
   const pathname = usePathname();
@@ -58,4 +58,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -20,7 +20,7 @@ import { LuMessageSquareText } from "react-icons/lu";
 import { CiHeart } from "react-icons/ci";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const page = () => {
+const Page = () => {
   const [isCatOpen, setIsCatOpen] = useState(false);
   const [selectedCat, setSelectedCat] = useState("همه آثار");
 
@@ -465,4 +465,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

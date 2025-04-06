@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 
 import PoemModal from "@/components/Modals/PoemModal";
-import BreadCrumb from "@/components/BreadCrumb/index";
+import BreadCrumb from "@/components/BreadCrumb/Index";
 
 import Image from "next/image";
 import single1 from "@/public/img/single1.png";
 
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants } = commonAnimations;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -127,4 +127,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -10,7 +10,7 @@ import PoetList from "@/components/Poet/PoetList";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
 
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants } = commonAnimations;
 
   const pathname = usePathname();
@@ -47,4 +47,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

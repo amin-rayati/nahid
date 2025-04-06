@@ -9,7 +9,7 @@ import alert from "@/public/img/alert.png";
 import EventModal from "@/components/Modals/EventModal";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants, imageHover } = commonAnimations;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -156,4 +156,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

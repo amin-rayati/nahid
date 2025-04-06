@@ -15,7 +15,7 @@ import { FaChevronLeft } from "react-icons/fa6";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants, imageHover } = commonAnimations;
 
   const viewsData = [
@@ -454,4 +454,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

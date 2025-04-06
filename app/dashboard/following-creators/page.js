@@ -9,7 +9,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { LuBook } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants, imageHover } = commonAnimations;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -219,4 +219,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -8,7 +8,7 @@ import Sort from "@/components/Works/Sort";
 import Filter from "@/components/Works/Filter";
 import StoreList from "@/components/Store/StoreList";
 
-const page = () => {
+const Page = () => {
   const { containerVariants, itemVariants } = commonAnimations;
   const pathname = usePathname();
   const Cat = pathname.split("/").pop();
@@ -55,4 +55,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -10,7 +10,7 @@ import single1 from "@/public/img/single1.png";
 import map from "@/public/img/map.png";
 import cube from "@/public/img/cube.png";
 import discount from "@/public/img/discount.png";
-const page = () => {
+const Page = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -233,4 +233,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
