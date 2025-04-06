@@ -2,20 +2,222 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Yekan Bakh";
+  src: local("Yekan Bakh"),
+    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 01\ Hairline.ttf)
+      format("truetype");
+
+  font-weight: 100;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  font-family: "Yekan Bakh";
+  src: local("Yekan Bakh"),
+    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 02\ Thin.ttf)
+      format("truetype");
+
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: local("Yekan Bakh"),
+    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 03\ Light.ttf)
+      format("truetype");
+
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: local("Yekan Bakh"),
+    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 04\ Regular.ttf)
+      format("truetype");
+
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: local("Yekan Bakh"),
+    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 05\ Medium.ttf)
+      format("truetype");
+
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: local("Yekan Bakh"),
+    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 06\ Bold.ttf)
+      format("truetype");
+
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: local("Yekan Bakh"),
+    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 07\ Heavy.ttf)
+      format("truetype");
+
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: local("Yekan Bakh"),
+    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 08\ Fat.ttf)
+      format("truetype");
+
+  font-weight: 1000;
+  font-style: normal;
+}
+
+* {
+  font-family: "Yekan Bakh";
+}
+.responsive-bg {
+  min-height: 450px;
+  background-position: top center;
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+}
+
+@media (max-width: 700px) {
+  .responsive-bg {
+    min-height: 300px;
+    background-size: cover;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.blog-bg {
+  min-height: 450px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 700px) {
+  .blog-bg {
+    min-height: 350px;
+    background-size: cover;
+  }
+}
+
+.singleBlog-bg {
+  min-height: 450px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 700px) {
+  .singleBlog-bg {
+    min-height: 350px;
+    background-size: cover;
+  }
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #a0c498;
+  border-radius: 18px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background-color: #faf1d7;
+  border-radius: 18px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #ebdfbe;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="range"]:focus {
+  background: linear-gradient(to right, #a0c498, #a0c498);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #a0c498;
+  border-radius: 50%;
+  border: 2px solid #a0c498;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #a0c498;
+  border-radius: 50%;
+  border: 2px solid #a0c498;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .rightSide {
+    position: sticky;
+    top: 0;
+    height: 110vh;
+  }
+
+  .leftSide {
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+}
+.react-tel-input .country-list {
+  background-color: #fefced !important;
+  border: 1px solid #ebdfbe !important;
+}
+
+.react-tel-input .country-list .country:hover {
+  background-color: #f5e9b8 !important;
+}
+
+.react-tel-input .flag {
+  transform: scale(1.2);
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus,
+.react-tel-input .selected-flag.open {
+  background-color: transparent !important;
+}
+
+.react-tel-input .country-list .country {
+  padding: 12px 10px !important;
+}
+.flag-button-with-divider::after {
+  content: "";
+  position: absolute;
+  left: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 1px;
+  background-color: #ebdfbe;
 }
