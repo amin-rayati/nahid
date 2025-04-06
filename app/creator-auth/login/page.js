@@ -13,10 +13,10 @@ const Page = () => {
   const { containerVariants, itemVariants, imageHover } = commonAnimations;
 
   const steps = [
-    { title: "درخواست" },
-    { title: "اطلاعات" },
-    { title: "احراز هویت" },
-    { title: "اتمام" },
+    { title: "درخواست", id: "1" },
+    { title: "اطلاعات", id: "2" },
+    { title: "احراز هویت", id: "3" },
+    { title: "اتمام", id: "4" },
   ];
 
   const [currentStep, setCurrentStep] = useState(0);
@@ -69,7 +69,7 @@ const Page = () => {
               className="flex items-center my-10 w-full"
             >
               {steps.map((step, index) => (
-                <div key={index} className="w-full">
+                <div key={step.id} className="w-full">
                   <div className="flex items-center mb-3">
                     <div
                       className={`w-8 h-8 flex items-center justify-center rounded-full text-black text-[16px] ${
