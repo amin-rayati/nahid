@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
 import { commonAnimations } from "@/utils/animations";
