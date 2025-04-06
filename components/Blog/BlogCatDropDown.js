@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 
@@ -8,21 +8,27 @@ const BlogCatDropDown = ({ Cat }) => {
   const router = useRouter();
   const [isCatOpen, setIsCatOpen] = useState(false);
 
-  const categoryMapping = {
-    all: "همه مقالات",
-    new: "مقالات جدید",
-    crime: "جنایی",
-    romance: "عاشقانه",
-    epic: "حماسی",
-  };
+  const categoryMapping = useMemo(
+    () => ({
+      all: "همه مقالات",
+      new: "مقالات جدید",
+      crime: "جنایی",
+      romance: "عاشقانه",
+      epic: "حماسی",
+    }),
+    []
+  );
 
-  const reverseCategoryMapping = {
-    "همه مقالات": "all",
-    "مقالات جدید": "new",
-    جنایی: "crime",
-    عاشقانه: "romance",
-    حماسی: "epic",
-  };
+  const reverseCategoryMapping = useMemo(
+    () => ({
+      "همه مقالات": "all",
+      "مقالات جدید": "new",
+      جنایی: "crime",
+      عاشقانه: "romance",
+      حماسی: "epic",
+    }),
+    []
+  );
 
   const [selectedCat, setSelectedCat] = useState(categoryMapping[Cat] || Cat);
 

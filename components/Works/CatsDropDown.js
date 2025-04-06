@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import cat1 from "@/public/img/cat1.png";
@@ -13,20 +13,25 @@ const CatsDropDown = ({ Cat }) => {
   const router = useRouter();
   const [isCatOpen, setIsCatOpen] = useState(false);
 
-  const categoryMapping = {
-    stories: "داستان ها",
-    poets: "اشعار",
+  const categoryMapping = useMemo(
+    () => ({
+      stories: "داستان ها",
+      poets: "اشعار",
+      audio: "کتاب صوتی",
+      store: "کتاب ها",
+    }),
+    []
+  );
 
-    audio: "کتاب صوتی",
-    store: "کتاب ها",
-  };
-
-  const reverseCategoryMapping = {
-    "داستان ها": "stories",
-    اشعار: "poets",
-    "کتاب صوتی": "audio",
-    "کتاب ها": "store",
-  };
+  const reverseCategoryMapping = useMemo(
+    () => ({
+      "داستان ها": "stories",
+      اشعار: "poets",
+      "کتاب صوتی": "audio",
+      "کتاب ها": "store",
+    }),
+    []
+  );
 
   const [selectedCat, setSelectedCat] = useState(categoryMapping[Cat] || Cat);
 
@@ -49,6 +54,7 @@ const CatsDropDown = ({ Cat }) => {
   };
 
   const selectedCatData = cat.find((option) => option.name === selectedCat);
+
   return (
     <div className="w-full">
       <div
