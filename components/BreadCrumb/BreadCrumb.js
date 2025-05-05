@@ -5,10 +5,12 @@ import { FaChevronLeft } from "react-icons/fa6";
 
 import Link from "next/link";
 const categoryMapping = {
-  stories: "داستان ها",
-  poets: "اشعار",
-  store: "فروشگاه",
-  audio: "کتاب صوتی",
+  aboutUs: "درباره ما",
+  contactUs: "ارتباط با ما",
+  shop: "پذیرنده ها",
+  blog: "مقالات",
+  job: "فرصت های شغلی",
+  sendResume: "ارسال رزومه",
 };
 
 const BreadCrumb = () => {
@@ -16,7 +18,7 @@ const BreadCrumb = () => {
   const path = pathname.split("/").filter(Boolean);
 
   return (
-    <nav className="text-gray-600 text-sm">
+    <nav className="text-gray-600 text-sm my-5 sm:my-4">
       <ul className="flex flex-wrap items-center gap-2 justify-start flex-row-reverse">
         <li>
           <Link href="/" className="text-[#1E1E1ECC] font-regular text-[16px]">

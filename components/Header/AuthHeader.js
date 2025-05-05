@@ -2,17 +2,16 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import logoImg from "@/public/img/nahidLogo.png";
-import back from "@/public/img/back.png";
-import bell from "@/public/img/bell.png";
+import authlogo from "@/public/img/authlogo.png";
+import back from "@/public/img/icons/back.png";
 
 const AuthHeader = () => {
   const router = useRouter();
 
   return (
-    <header className="bg-[#FEFCED] fixed top-0 left-0 w-full z-20">
+    <header className="bg-[#E9EFF0] fixed top-0 left-0 w-full z-20">
       <div
-        className="flex items-center justify-between sm:justify-between p-4 w-[100%]"
+        className="flex items-center justify-between  px-4 w-[100%]"
         dir="rtl"
       >
         <div
@@ -22,9 +21,8 @@ const AuthHeader = () => {
           <Image src={back} alt="back" />
           <p>بازگشت</p>
         </div>
-        <Image src={logoImg} alt="logoImg" />
-        <Link href="/notifications">
-          <Image src={bell} alt="bell" />
+        <Link href="/">
+          <Image src={authlogo} alt="authlogo" className="h-20 object-cover" />
         </Link>
       </div>
     </header>

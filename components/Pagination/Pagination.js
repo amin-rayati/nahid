@@ -53,18 +53,21 @@ const Pagination = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center flex-wrap sm:flex-nowrap gap-1">
+      <div
+        className="flex items-center justify-center flex-wrap sm:flex-nowrap gap-1"
+        dir="ltr"
+      >
         {/* Next Button */}
         <button
           onClick={handleNext}
           className={`${
-            currentPage === totalPages
-              ? "bg-[#FEFCED] text-[#706D8F]"
-              : "bg-[#FAF1D7] text-[#FFE76C]"
-          } rounded-[8px] p-4 border-[1px] border-[#EBDFBE] hidden sm:block`}
+            currentPage === totalPages ? " text-[#706D8F]" : "text-[#FFE76C]"
+          } p-4 hidden sm:block`}
           disabled={currentPage === totalPages}
         >
-          <FaAngleLeft color="black" />
+          <FaAngleLeft
+            color={currentPage === totalPages ? "#706D8F" : "#000000"}
+          />
         </button>
 
         {/* Page Numbers */}
@@ -75,12 +78,12 @@ const Pagination = () => {
               <button
                 key={index}
                 onClick={() => item !== "..." && handlePageChange(item)}
-                className={`py-3 px-5 rounded-[8px] ${
+                className={`py-3 px-5 rounded-full ${
                   item === currentPage
-                    ? "bg-[#354259] text-white"
+                    ? "bg-[#1F5D6A] text-white"
                     : item === "..."
-                    ? "bg-[#FAF1D7] text-black cursor-default  border-[1px] border-[#EBDFBE]"
-                    : "bg-[#FAF1D7] text-black  border-[1px] border-[#EBDFBE]"
+                    ? "bg-[#E2E8EB] text-black cursor-default "
+                    : "bg-[#E2E8EB] text-black "
                 }`}
                 disabled={item === "..." || item === currentPage}
               >
@@ -92,41 +95,35 @@ const Pagination = () => {
         {/* Previous Button */}
         <button
           onClick={handlePrev}
-          className={`${
-            currentPage === 1
-              ? "bg-[#FEFCED] text-[#706D8F]"
-              : "bg-[#FAF1D7] text-[#FFE76C]"
-          } rounded-[8px] p-4 border-[1px] border-[#EBDFBE] hidden sm:block`}
+          className="p-4 hidden sm:block"
           disabled={currentPage === 1}
         >
-          <FaAngleRight color="black" />
+          <FaAngleRight color={currentPage === 1 ? "#706D8F" : "#000000"} />
         </button>
       </div>
+
       <div className="flex gap-1 items-center justify-center my-5">
         {/* Next Button */}
         <button
-          onClick={handleNext}
-          className={`${
-            currentPage === totalPages
-              ? "bg-[#FEFCED] text-[#706D8F]"
-              : "bg-[#FAF1D7] text-[#FFE76C]"
-          } rounded-[8px] p-4 border-[1px] border-[#EBDFBE] block sm:hidden`}
-          disabled={currentPage === totalPages}
-        >
-          <FaAngleLeft color="black" />
-        </button>
-
-        {/* Previous Button */}
-        <button
           onClick={handlePrev}
           className={`${
-            currentPage === 1
-              ? "bg-[#FEFCED] text-[#706D8F]"
-              : "bg-[#FAF1D7] text-[#FFE76C]"
-          } rounded-[8px] p-4 border-[1px] border-[#EBDFBE] block sm:hidden`}
+            currentPage === 1 ? " text-[#706D8F]" : "text-[#FFE76C]"
+          } rounded-[8px] p-4 block sm:hidden`}
           disabled={currentPage === 1}
         >
-          <FaAngleRight color="black" />
+          <FaAngleRight color={currentPage === 1 ? "#706D8F" : "#000000"} />
+        </button>
+        {/*  Previous Button */}
+        <button
+          onClick={handleNext}
+          className={`${
+            currentPage === totalPages ? " text-[#706D8F]" : "text-[#FFE76C]"
+          } rounded-[8px] p-4 block sm:hidden`}
+          disabled={currentPage === totalPages}
+        >
+          <FaAngleLeft
+            color={currentPage === totalPages ? "#706D8F" : "#000000"}
+          />
         </button>
       </div>
     </>

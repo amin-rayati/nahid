@@ -5,9 +5,8 @@
 @font-face {
   font-family: "Yekan Bakh";
   src: local("Yekan Bakh"),
-    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 01\ Hairline.ttf)
+    url("/fonts/Yekan/FaNum/Yekan Bakh FaNum 01 Hairline.ttf")
       format("truetype");
-
   font-weight: 100;
   font-style: normal;
 }
@@ -15,9 +14,7 @@
 @font-face {
   font-family: "Yekan Bakh";
   src: local("Yekan Bakh"),
-    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 02\ Thin.ttf)
-      format("truetype");
-
+    url("/fonts/Yekan/FaNum/Yekan Bakh FaNum 02 Thin.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
 }
@@ -25,9 +22,7 @@
 @font-face {
   font-family: "Yekan Bakh";
   src: local("Yekan Bakh"),
-    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 03\ Light.ttf)
-      format("truetype");
-
+    url("/fonts/Yekan/FaNum/Yekan Bakh FaNum 03 Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
@@ -35,9 +30,7 @@
 @font-face {
   font-family: "Yekan Bakh";
   src: local("Yekan Bakh"),
-    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 04\ Regular.ttf)
-      format("truetype");
-
+    url("/fonts/Yekan/FaNum/Yekan Bakh FaNum 04 Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -45,9 +38,7 @@
 @font-face {
   font-family: "Yekan Bakh";
   src: local("Yekan Bakh"),
-    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 05\ Medium.ttf)
-      format("truetype");
-
+    url("/fonts/Yekan/FaNum/Yekan Bakh FaNum 05 Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
@@ -55,9 +46,7 @@
 @font-face {
   font-family: "Yekan Bakh";
   src: local("Yekan Bakh"),
-    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 06\ Bold.ttf)
-      format("truetype");
-
+    url("/fonts/Yekan/FaNum/Yekan Bakh FaNum 06 Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -65,9 +54,7 @@
 @font-face {
   font-family: "Yekan Bakh";
   src: local("Yekan Bakh"),
-    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 07\ Heavy.ttf)
-      format("truetype");
-
+    url("/fonts/Yekan/FaNum/Yekan Bakh FaNum 07 Heavy.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -75,127 +62,48 @@
 @font-face {
   font-family: "Yekan Bakh";
   src: local("Yekan Bakh"),
-    url(../public/fonts/Yekan/FaNum/Yekan\ Bakh\ FaNum\ 08\ Fat.ttf)
-      format("truetype");
-
+    url("/fonts/Yekan/FaNum/Yekan Bakh FaNum 08 Fat.ttf") format("truetype");
   font-weight: 1000;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Morabba";
+  src: url("/fonts/morabba/morabba/Morabba-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
   font-style: normal;
 }
 
 * {
   font-family: "Yekan Bakh";
 }
-.responsive-bg {
-  min-height: 450px;
-  background-position: top center;
-  /* background-repeat: no-repeat; */
-  background-size: contain;
+
+.clip-ribbon {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
 }
 
-@media (max-width: 700px) {
-  .responsive-bg {
-    min-height: 300px;
-    background-size: cover;
-  }
+.custom-coverflow-slider .swiper-slide {
+  opacity: 0.3;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+.custom-coverflow-slider .swiper-slide-prev,
+.custom-coverflow-slider .swiper-slide-next {
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+.custom-coverflow-slider .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10;
 }
 
-.blog-bg {
-  min-height: 450px;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media (max-width: 700px) {
-  .blog-bg {
-    min-height: 350px;
-    background-size: cover;
-  }
-}
-
-.singleBlog-bg {
-  min-height: 450px;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media (max-width: 700px) {
-  .singleBlog-bg {
-    min-height: 350px;
-    background-size: cover;
-  }
-}
-
-.scrollbar-custom::-webkit-scrollbar {
-  width: 5px;
-}
-
-.scrollbar-custom::-webkit-scrollbar-thumb {
-  background-color: #a0c498;
-  border-radius: 18px;
-}
-
-.scrollbar-custom::-webkit-scrollbar-track {
-  background-color: #faf1d7;
-  border-radius: 18px;
-}
-
-input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 6px;
-  background: #ebdfbe;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-input[type="range"]:focus {
-  background: linear-gradient(to right, #a0c498, #a0c498);
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  background: #a0c498;
-  border-radius: 50%;
-  border: 2px solid #a0c498;
-  cursor: pointer;
-}
-
-input[type="range"]::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  background: #a0c498;
-  border-radius: 50%;
-  border: 2px solid #a0c498;
-  cursor: pointer;
-}
-
-@media (min-width: 768px) {
-  .rightSide {
-    position: sticky;
-    top: 0;
-    height: 110vh;
-  }
-
-  .leftSide {
-    overflow-y: auto;
-    max-height: 100vh;
-  }
-}
 .react-tel-input .country-list {
-  background-color: #fefced !important;
-  border: 1px solid #ebdfbe !important;
+  background-color: #ffffff !important;
 }
 
 .react-tel-input .country-list .country:hover {
-  background-color: #f5e9b8 !important;
+  background-color: #f1f1f1 !important;
 }
 
 .react-tel-input .flag {
@@ -219,5 +127,19 @@ input[type="range"]::-moz-range-thumb {
   transform: translateY(-50%);
   height: 20px;
   width: 1px;
-  background-color: #ebdfbe;
+  background-color: rgba(0, 0, 0, 0.237);
+}
+
+.singleBlog-bg {
+  min-height: 450px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 700px) {
+  .singleBlog-bg {
+    min-height: 350px;
+    background-size: cover;
+  }
 }
